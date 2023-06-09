@@ -499,10 +499,13 @@ body {
 /* smartphone setting */
 @media (max-width: 767px) {
   /* general */
+  html {
+    max-width: 390px;
+  }
+
   body {
     width: 390px;
     min-height: 1420px;
-    padding-bottom: 0;
   }
 
   /* section 1: header */
@@ -572,6 +575,7 @@ body {
 
   .content-section__content {
     min-width: 390px;
+    padding-left: 0;
   }
 
   .content-section__title {
@@ -579,12 +583,15 @@ body {
     min-width: 100%;
     align-items: center;
     margin-bottom: 10px;
-    padding: 5%;
+    padding: 2% 5%;
+    padding-right: 0;
     border: none;
     font-family: name;
   }
 
   .content-section__title h2 {
+    padding: 0;
+    margin: 0;
     width: 80%;
     font-size: 1.5rem;
   }
@@ -615,7 +622,7 @@ body {
 
   .users {
     min-width: 100vw;
-    margin: 2% 0;
+    margin: 2%;
   }
 
   .users p {
@@ -662,7 +669,7 @@ body {
   .search-btn-open {
     position: fixed;
     bottom: 30px;
-    width: 370px;
+    width: 365px;
   }
 
   .sidebar {
