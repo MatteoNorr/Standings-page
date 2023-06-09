@@ -648,7 +648,10 @@ body {
     font-size: 14px;
   }
 
-  /* players ranking - year */
+  .navbar {
+    display: flex;
+  }
+
   .sidebar {
     display: none;
   }

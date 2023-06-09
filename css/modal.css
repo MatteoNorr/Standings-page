@@ -82,6 +82,14 @@
 }
 
 @media (max-width: 767px) {
+  .modal-container-card {
+    overflow: scroll;
+  }
+
+  .modal-container-card::before {
+    height: 110%;
+  }
+
   .modal-img {
     width: 200px;
     height: 100px;
