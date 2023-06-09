@@ -1,0 +1,655 @@
+@import url(./reset.css);
+@import url(./variables.css);
+@import url(./font.css);
+@import url(./modal.css);
+@import url(./animations.css);
+
+/* desktop setting */
+/* general */
+body {
+  width: 100vw;
+  height: 100%;
+  background: var(--background-body);
+  overflow-x: hidden;
+  padding-bottom: 5%;
+}
+
+.body-light {
+  background: #ececec;
+}
+
+/* section 1: header */
+.header {
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: standingTitle;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+  background-color: var(--background-el);
+  margin: 0;
+}
+
+.header h1 {
+  color: var(--title-color);
+  font-size: 3.5rem;
+  animation: titleSlide 1.2s;
+}
+
+.header-light h1 {
+  color: #ffd08a;
+}
+
+/* hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-size: cover;
+  background-position: 70%;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.775);
+  z-index: 2;
+}
+
+.hero__image {
+  width: 30%;
+  z-index: 3;
+}
+
+.hero__image img {
+  border-radius: 5px;
+}
+
+.hero__image img:hover {
+  box-shadow: 5px 5px 10px black;
+  cursor: pointer;
+}
+
+.hero__text-container {
+  width: 50%;
+  font-family: username;
+  color: var(--title-color);
+  font-size: 1rem;
+  z-index: 3;
+}
+
+.hero__game-title {
+  text-align: right;
+  font-size: 4rem;
+}
+
+.hero__game-description {
+  text-align: right;
+  font-family: name;
+  font-size: 1rem;
+}
+
+/* section 2: players - mouth */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+}
+
+.content-section {
+  width: 80%;
+  height: 100%;
+  padding: 0 5%;
+  border: none;
+}
+
+.content-section__title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  font-family: username;
+  color: var(--title-color);
+  border-bottom: solid var(--title-color) 3px;
+}
+
+.content-section__title h2 {
+  width: 80%;
+  font-size: 2.5rem;
+}
+
+.content-title-light {
+  color: var(--background-light);
+  border-bottom: solid var(--background-light) 3px;
+}
+
+.content-section__title__switch-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.content-section__title__switch-toggle:hover {
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.332);
+}
+
+.switch-toggle__img {
+  width: 40px;
+  height: 40px;
+}
+
+.light-mode img {
+  width: 80px;
+}
+
+.light-mode-toggle {
+  content: url(../assets/images/pixel-art-illustration-moon-pixelated-moon-shiny-moon-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector-removebg-preview.png);
+}
+
+.users__data-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 0;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  font-family: username;
+}
+
+.users__data-title-light {
+  color: var(--background-light);
+}
+
+.users {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: var(--text-color);
+}
+
+.user-info:nth-child(8) {
+  background-color: #a36621;
+  border-radius: 10px;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.user-info:nth-child(9) {
+  background-color: #ebfef2;
+  color: var(--text-color-dark);
+  border-radius: 10px;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.user-info:nth-child(10) {
+  background-color: #e7bf3c;
+  border-radius: 10px;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.user-info:nth-child(10):hover {
+  background-color: #e7bf3c;
+}
+.user-info:nth-child(9):hover {
+  background-color: #ebfef2;
+}
+.user-info:nth-child(8):hover {
+  background-color: #a36621;
+}
+
+.user-info:hover {
+  transform: scale(101%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
+  border-radius: 10px;
+  background-color: #3a4a40;
+  cursor: pointer;
+}
+
+.user-info p {
+  width: 200px;
+}
+
+.user-info-light {
+  color: #404040;
+}
+
+.user-info-light:hover {
+  background-color: var(--background-light);
+}
+
+.username {
+  width: 200px;
+  font-family: username;
+  font-size: 1.5rem;
+}
+
+.name {
+  font-family: name;
+  font-size: 10px;
+}
+
+.user-mail {
+  font-family: name;
+  width: 200px;
+  font-size: 15px;
+}
+
+.user-points {
+  width: 200px;
+  font-family: name;
+  font-size: 2rem;
+  text-align: right;
+}
+
+.user-points span:first {
+  color: rgb(162, 157, 18);
+}
+
+/* players ranking - year */
+.sidebar {
+  width: 20%;
+  height: 100vh;
+}
+
+.sidebar__other-players {
+  padding: 5%;
+  color: var(--title-color);
+}
+
+.sidebar__other-players h2 {
+  text-align: center;
+  font-family: username;
+  font-size: 2rem;
+}
+
+.global-rank-title-light {
+  color: var(--background-light);
+}
+
+.sidebar__container-gamers {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 5%;
+  border-radius: 20px;
+  background-color: var(--background-el);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.global-user-info {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: username;
+}
+
+.global-position {
+  font-size: 1.5rem;
+}
+
+.global-user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+}
+
+.global-user-img:hover {
+  box-shadow: 2px 2px 5px black;
+}
+
+.global-username {
+  width: 300px;
+  font-size: 12px;
+}
+
+.container-gamers-light {
+  background: var(--background-light);
+  color: var(--text-color);
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  transform: translate(-50%, 0);
+  bottom: 15px;
+  left: 50%;
+  width: 250px;
+  height: 70px;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--background-el);
+  font-family: username;
+  font-size: 13px;
+  color: var(--background-body);
+  box-shadow: 5px 5px 10px black;
+  z-index: 7;
+}
+
+.home-btn,
+.game-list-button {
+  width: 50%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-btn img:hover,
+.game-list-button img:hover {
+  transform: translateY(-5px);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.home-btn img,
+.game-list-button img {
+  width: 35px;
+  height: 30px;
+}
+
+.search-btn {
+  position: fixed;
+  bottom: 15px;
+  right: 2%;
+  width: 50px;
+  height: 50px;
+  display: none;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--background-el);
+  box-shadow: 5px 5px 10px black;
+  cursor: pointer;
+  z-index: 7;
+}
+
+.search-input {
+  display: none;
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: name;
+  font-size: 12px;
+}
+
+.search-btn-open {
+  width: 200px;
+  height: 70px;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: space-around;
+  transition: width 0.35s, height 0.35s;
+}
+
+.visible {
+  display: block;
+}
+
+.header-light {
+  background: var(--background-light);
+}
+
+/* tablet setting */
+@media (max-width: 1300px) {
+  /* section 1: header */
+  .header {
+    height: 140px;
+  }
+
+  .header h1 {
+    font-size: 45px;
+  }
+
+  /* hero */
+  .hero {
+    min-width: 98vw;
+    height: 500px;
+  }
+
+  .hero__text-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+  }
+
+  .hero__game-title,
+  .hero__game-description {
+    text-align: center;
+  }
+
+  .hero__image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+  }
+
+  /* section 2: players - mouth */
+  .content-section {
+    width: 100vw;
+  }
+
+  .users__data-title {
+    width: 100%;
+  }
+
+  .users {
+    width: 100%;
+  }
+
+  .username {
+    font-size: 15px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+/* smartphone setting */
+@media (max-width: 767px) {
+  /* general */
+  body {
+    width: 390px;
+  }
+
+  /* section 1: header */
+  .header {
+    min-width: 390px;
+    height: 100px;
+  }
+
+  .header h1 {
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  /* hero */
+  .hero {
+    height: 500px;
+    flex-direction: column;
+    background-size: cover;
+  }
+
+  .hero__image {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+  }
+
+  .hero__text-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+  }
+
+  .hero__game-title {
+    font-size: 2rem;
+  }
+
+  .hero__game-description {
+    font-size: 1rem;
+  }
+
+  .hero__game-title,
+  .hero__game-description {
+    text-align: center;
+  }
+
+  /* search button */
+  .search-btn {
+    position: fixed;
+    top: 10px;
+    z-index: 9;
+  }
+
+  .search-btn-open {
+    width: 370px;
+  }
+
+  /* section 2: players - mouth */
+  .container {
+    width: 100vw;
+    padding: 0;
+  }
+
+  .content-section {
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content-section__content {
+    min-width: 390px;
+  }
+
+  .content-section__title {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5%;
+    border: none;
+    font-family: name;
+  }
+
+  .content-section__title h2 {
+    width: 80%;
+    font-size: 1.5rem;
+  }
+
+  .content-section__title__switch-toggle {
+    text-align: center;
+  }
+
+  .users__data-title {
+    width: 100%;
+    font-size: 13px;
+    padding: 1% 5%;
+  }
+
+  .users__data-title p {
+    width: 150px;
+    text-align: center;
+  }
+
+  .users__data-title p:first-child {
+    padding-left: 3%;
+    text-align: left;
+  }
+
+  .users__data-title p:last-child {
+    text-align: right;
+  }
+
+  .users {
+    margin: 0;
+    padding: 0 5%;
+  }
+
+  .users p {
+    width: 150px;
+  }
+
+  .username {
+    font-size: 12px;
+  }
+
+  .name {
+    font-size: 10px;
+  }
+
+  .user-mail {
+    text-align: left;
+    font-size: 10px;
+  }
+
+  .user-points {
+    text-align: right;
+    font-size: 14px;
+  }
+
+  /* players ranking - year */
+  .sidebar {
+    display: none;
+  }
+}

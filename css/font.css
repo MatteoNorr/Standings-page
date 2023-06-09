@@ -1,0 +1,14 @@
+@font-face {
+  font-family: standingTitle;
+  src: url(../assets/Font/platinum_sign/Platinum\ Sign.ttf);
+}
+
+@font-face {
+  font-family: name;
+  src: url(../assets/Font/game_played/Game\ Played.otf);
+}
+
+@font-face {
+  font-family: username;
+  src: url(../assets/Font/gameplay/Gameplay.ttf);
+}

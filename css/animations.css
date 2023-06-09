@@ -1,0 +1,21 @@
+@keyframes modalContainerPopup {
+  from {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleSlide {
+  from {
+    transform: translateY(-250px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
