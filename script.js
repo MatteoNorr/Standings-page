@@ -151,7 +151,7 @@ document.body.addEventListener("wheel", (e) => {
     searchBtn.style.display = "flex";
   } else if (e.deltaY < 0) {
     navbar.style.display = "none";
-    searchBtn.style.display = "none";
+    // searchBtn.style.display = "none";
   }
 });
 
